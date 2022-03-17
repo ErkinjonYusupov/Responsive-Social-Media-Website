@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main style="background:hsl(252,30%,95%);">
+      <v-main style="background:hsl(252,30%,95%)">
       <router-view />
     </v-main>
   </v-app>
@@ -14,7 +14,4 @@ export default {
     //
   }),
 };
-
-<style scoped>
-  @import './assets/style/style.css';
-</style>
+</script>

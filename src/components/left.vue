@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="data.show">
     <a href="" class="profile">
       <div class="profile-photo">
         <img src="../assets/images/profile-1.jpg" alt="" />
@@ -11,7 +11,7 @@
     </a>
     <!-- sidebar -->
     <div class="sidebar">
-      <a class="menu-item active">
+      <a class="menu-item">
         <span><i class="uil uil-home"></i></span>
         <h3>Bosh sahifa</h3>
       </a>
@@ -26,54 +26,6 @@
           ></span
         >
         <h3>Bildirishnomalar</h3>
-        <!-- notification popup -->
-        <div class="notifications-popup">
-          <div>
-            <div class="profile-photo">
-              <img src="../assets/images/profile-2.jpg" alt="" />
-            </div>
-            <div class="notification-body">
-              <b>Kake Benjamin </b> accepted your friend request
-              <small class="text-muted">2 KUN OLDIN</small>
-            </div>
-          </div>
-          <div>
-            <div class="profile-photo">
-              <img src="../assets/images/profile-3.jpg" alt="" />
-            </div>
-            <div class="notification-body">
-              <b>Kake Benjamin </b> comented on your post
-              <small class="text-muted">2 KUN OLDIN</small>
-            </div>
-          </div>
-          <div>
-            <div class="profile-photo">
-              <img src="../assets/images/profile-5.jpg" alt="" />
-            </div>
-            <div class="notification-body">
-              <b>Kake Benjamin </b> accepted your friend request
-              <small class="text-muted">2 KUN OLDIN</small>
-            </div>
-          </div>
-          <div>
-            <div class="profile-photo">
-              <img src="../assets/images/profile-6.jpg" alt="" />
-            </div>
-            <div class="notification-body">
-              <b>Kake Benjamin </b> accepted your friend request
-              <small class="text-muted">2 KUN OLDIN</small>
-            </div>
-          </div>
-          <div>
-            <div class="profile-photo">
-              <img src="../assets/images/profile-7.jpg" alt="" />
-            </div>
-            <div class="notification-body">
-              <b>Kake Benjamin </b> accepted your friend request
-              <small class="text-muted">2 KUN OLDIN</small>
-            </div>
-          </div>
-        </div>
       </a>
       <a class="menu-item">
         <span
@@ -91,43 +43,41 @@
         <span><i class="uil uil-chart-line"></i></span>
         <h3>Analitika</h3>
       </a>
-      <a class="menu-item">
+      <a @click="show_theme" class="menu-item">
         <span><i class="uil uil-palette"></i></span>
         <h3>Temalar</h3>
       </a>
-      <a class="menu-item active">
+      <a class="menu-item">
         <span><i class="uil uil-setting"></i></span>
         <h3>Sozlamalar</h3>
       </a>
     </div>
     <!-- end of sidebar -->
     <label for="create-post" class="btn btn-primary">Post yaratish</label>
+    <theme-dialog ref="sidebar" />
   </div>
 </template>
 
 <script>
-
+import themeDialog from "./theme/theme-dialog.vue";
 export default {
+  components: { themeDialog },
   name: "left",
+  props: {
+    data: {
+      type: Object,
+      required: true,
+    },
+  },
   data() {
     return {
-      menu_items: [
-        { icon: "mdi-home-outline", title: "Bosh sahifa", active: true },
-        { icon: "mdi-compass-outline", title: "Explore", active: false },
-        { icon: "mdi-bell-outline", title: "Bildirishnomalar", active: false },
-        { icon: "mdi-email-open-outline", title: "Xabarlar", active: false },
-        { icon: "mdi-bookmark-outline", title: "Xaridlar", active: false },
-        { icon: "mdi-google-analytics", title: "Analitika", active: false },
-        { icon: "mdi-format-line-style", title: "Temalar", active: false },
-        { icon: "mdi-cog-outline", title: "Sozlamalar", active: false },
-      ],
+      menu_dialog: true,
     };
   },
-  mounted(){
-
+  methods: {
+    show_theme() {
+      this.$refs.sidebar.show();
+    },
   },
-  methods:{
-    
-  }
 };
 </script>

@@ -63,9 +63,9 @@
               <small>Dubai, 15 MINUT OLDIN</small>
             </div>
           </div>
-           <span class="edit">
-              <i class="uil uil-ellipsis-h"></i>
-            </span>
+          <span class="edit">
+            <i class="uil uil-ellipsis-h"></i>
+          </span>
         </div>
         <!-- =====post body ====-->
         <div class="photo">
@@ -89,7 +89,8 @@
         </div>
         <div class="caption">
           <p>
-            <b>Lena Rose</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            <b>Lena Rose</b> Lorem ipsum dolor sit amet consectetur adipisicing
+            elit.
             <span class="harsh-tag">#lifestyle</span>
           </p>
         </div>
@@ -108,9 +109,9 @@
               <small>Dubai, 15 MINUT OLDIN</small>
             </div>
           </div>
-           <span class="edit">
-              <i class="uil uil-ellipsis-h"></i>
-            </span>
+          <span class="edit">
+            <i class="uil uil-ellipsis-h"></i>
+          </span>
         </div>
         <!-- =====post body ====-->
         <div class="photo">
@@ -134,7 +135,8 @@
         </div>
         <div class="caption">
           <p>
-            <b>Lena Rose</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            <b>Lena Rose</b> Lorem ipsum dolor sit amet consectetur adipisicing
+            elit.
             <span class="harsh-tag">#lifestyle</span>
           </p>
         </div>
